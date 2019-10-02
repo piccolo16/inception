@@ -121,9 +121,9 @@ public class OverlapIterator
         }
 
         final boolean nexta_starts_before_curb_ends = (nexta != null)
-                && (nexta.getBeginCharacter() <= _curb.getEndCharacter());
-        final boolean cura_ends_before_or_with_curb = _cura.getEndCharacter() <= _curb
-                .getEndCharacter();
+                && (nexta.getBegin() <= _curb.getEnd());
+        final boolean cura_ends_before_or_with_curb = _cura.getEnd() <= _curb
+                .getEnd();
 
         if (_log.isTraceEnabled()) {
             _log.trace("---");
