@@ -220,7 +220,7 @@ public class OverlapIterator
         // Seek back to the first segment that does not overlap
         // with curb and at most until the last b step we made.
         boolean steppedBack = false;
-        while ((_na > _last_b_step_na) && (_cura.getEnd() > _curb.getBegin())) {
+        while ((_na > _last_b_step_na) && (_cura.getEndCharacter() > _curb.getBeginCharacter())) {
             stepBackA();
             steppedBack = true;
         }
