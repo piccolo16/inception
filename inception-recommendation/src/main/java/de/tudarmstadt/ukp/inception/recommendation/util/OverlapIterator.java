@@ -200,7 +200,7 @@ public class OverlapIterator
             _log.trace("   -> B: " + _nb + "/" + _maxb + " " + _curb);
         }
 
-        if (_curb.getBeginCharacter() < _cura.getEndCharacter()) {
+        if (_curb.getBegin() < _cura.getEnd()) {
             // Rewind A to the point where it was when we last stepped
             // up B.
             rewindA();
