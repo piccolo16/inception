@@ -213,8 +213,8 @@ public class Predictions
         return predictions.entrySet().stream()
             .filter(f -> f.getKey().getDocumentName().equals(aDocumentName))
             .filter(f -> f.getKey().getLayerId() == aLayer.getId())
-            .filter(f -> f.getKey().getOffset().getBeginCharacter() == aBegin)
-            .filter(f -> f.getKey().getOffset().getEndCharacter() == aEnd)
+            .filter(f -> f.getKey().getOffset().getBegin() == aBegin)
+            .filter(f -> f.getKey().getOffset().getEnd() == aEnd)
             .filter(f -> f.getValue().getFeature().equals(aFeature))
             .map(Map.Entry::getValue)
             .collect(Collectors.toList());

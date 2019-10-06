@@ -48,8 +48,8 @@ public class ExtendedId
         this.annotationId = annotationId;
         this.sentenceId = sentenceId;
         this.recommenderId = recommenderId;
-        this.begin = offset.getBeginCharacter();
-        this.end = offset.getEndCharacter();
+        this.begin = offset.getBegin();
+        this.end = offset.getEnd();
     }
 
     public String getDocumentName()
