@@ -127,6 +127,8 @@ public class LearningRecord
         this.offsetTokenEnd = offsetTokenEnd;
     }
 
+   // public int[] setTokenEnds(int)
+
     public int getOffsetCharacterBegin() {
         return offsetCharacterBegin;
     }

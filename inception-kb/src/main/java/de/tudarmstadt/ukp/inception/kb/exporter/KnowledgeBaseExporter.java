@@ -118,7 +118,7 @@ public class KnowledgeBaseExporter implements ProjectExporter
             exportedKB.setReadOnly(kb.isReadOnly());
             exportedKB.setEnabled(kb.isEnabled());
             exportedKB.setReification(kb.getReification().toString());
-            exportedKB.setSupportConceptLinking(kb.isSupportConceptLinking());
+            //exportedKB.setSupportConceptLinking(kb.isSupportConceptLinking()); // Removed setSupportConceptLinking as it is deprecated function in ExportedKnowledgeBase.java
             exportedKB.setBasePrefix(kb.getBasePrefix());
             exportedKB.setRootConcepts(
                 kb.getRootConcepts()
@@ -213,7 +213,7 @@ public class KnowledgeBaseExporter implements ProjectExporter
             // The imported project may date from a time where we did not yet have the FTS IRI.
             // In that case we use concept linking support as an indicator that we dealt with a
             // remote Virtuoso.
-            if (exportedKB.isSupportConceptLinking() && exportedKB.getFullTextSearchIri() == null) {
+            if (exportedKB.getFullTextSearchIri() == null) {
                 kb.setFullTextSearchIri(IriConstants.FTS_VIRTUOSO);
             }
             kb.setFullTextSearchIri(exportedKB.getFullTextSearchIri() != null

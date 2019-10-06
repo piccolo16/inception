@@ -80,7 +80,7 @@ public class VisibilityCalculationTests
 
         layer = new AnnotationLayer();
         layer.setName(neName);
-        layer.setId(new Long(42));
+        layer.setId(Long.valueOf(42));
         layerId = layer.getId();
 
         project = new Project();

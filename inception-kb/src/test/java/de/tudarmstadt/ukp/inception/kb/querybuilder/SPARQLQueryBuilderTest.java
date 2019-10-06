@@ -425,12 +425,16 @@ public class SPARQLQueryBuilderTest
                 .usingElementComparatorOnFields(
                         "identifier", "name", "description", "range", "domain")
                 .containsExactlyInAnyOrder(
-                        new KBHandle("http://example.org/#property-1", "Property 1",
-                                "Property One", null, "http://example.org/#explicitRoot", 
+                        /*new KBHandle("http://example.org/#property-1", "Property 1",
+                                "Property One", null, "http://example.org/#explicitRoot",
                                 "http://www.w3.org/2001/XMLSchema#string"),
                         new KBHandle("http://example.org/#property-2", "Property 2",
-                                "Property Two", null, "http://example.org/#subclass1", 
-                                "http://www.w3.org/2001/XMLSchema#Integer"),
+                                "Property Two", null, "http://example.org/#subclass1",
+                                "http://www.w3.org/2001/XMLSchema#Integer"),*/
+                    new KBHandle("http://example.org/#property-1", "Property 1",
+                        "Property One", null),
+                    new KBHandle("http://example.org/#property-2", "Property 2",
+                        "Property Two", null),
                         new KBHandle("http://example.org/#property-3", "Property 3",
                                 "Property Three"),
                         new KBHandle("http://example.org/#subproperty-1-1", "Subproperty 1-1",

@@ -1177,7 +1177,7 @@ public class ActiveLearningSidebar
         ) {
             AnnotationSuggestion suggestion = alState.getSuggestion().get();
             if (
-                    acceptedSuggestion.getOffset().equals(suggestion.getOffset()) && 
+                (new Offset(acceptedSuggestion.getBegin(),acceptedSuggestion.getEnd())).equals(new Offset(acceptedSuggestion.getBegin(),acceptedSuggestion.getEnd())) &&
                     vid.getLayerId() == suggestion.getLayerId() && 
                     acceptedSuggestion.getFeature().equals(suggestion.getFeature())
             ) {

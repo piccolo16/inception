@@ -81,7 +81,7 @@ public class SuggestionGroup
         suggestions = new ArrayList<>(asList(aItems));
         sorted = suggestions.size() < 2;
         if (!suggestions.isEmpty()) {
-            offset = suggestions.get(0).getOffset();
+            offset = new Offset(suggestions.get(0).getBegin(), suggestions.get(0).getEnd());
             feature = get(0).getFeature();
             layerId = get(0).getLayerId();
             documentName = get(0).getDocumentName();
@@ -265,7 +265,7 @@ public class SuggestionGroup
         
         // Cache information that must be consistent in the group when the first item is added
         if (empty) {
-            offset = aSuggestion.getOffset();
+            offset = new Offset(aSuggestion.getBegin(), aSuggestion.getEnd());
             feature = aSuggestion.getFeature();
             layerId = aSuggestion.getLayerId();
             documentName = aSuggestion.getDocumentName();

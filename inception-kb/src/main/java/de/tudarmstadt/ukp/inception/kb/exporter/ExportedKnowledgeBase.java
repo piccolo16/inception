@@ -251,7 +251,7 @@ public class ExportedKnowledgeBase
         reification = aReification;
     }
 
-    @Deprecated
+   /* @Deprecated
     public void setSupportConceptLinking(boolean aSupportConceptLinking) {
         supportConceptLinking = aSupportConceptLinking;
     }
@@ -259,7 +259,7 @@ public class ExportedKnowledgeBase
     @Deprecated
     public boolean isSupportConceptLinking() {
         return supportConceptLinking;
-    }
+    }*/
 
     public String getBasePrefix()
     {

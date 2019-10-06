@@ -42,11 +42,11 @@ public class KBHandle
     private String debugInfo;
     
     // domain and range for cases in which the KBHandle represents a property
-    @Deprecated
-    private String domain;
+   // @Deprecated
+    //private String domain;
     
-    @Deprecated
-    private String range;
+    //@Deprecated
+   // private String range;
 
     public KBHandle()
     {
@@ -78,6 +78,7 @@ public class KBHandle
         language = aLanguage;
     }
 
+    /*
     @Deprecated
     public KBHandle(String aIdentifier, String aLabel, String aDescription, String aLanguage,
             String aDomain, String aRange)
@@ -90,6 +91,10 @@ public class KBHandle
         range = aRange;
     }
 
+     */
+
+
+    /*
     @Deprecated
     public String getDomain()
     {
@@ -113,6 +118,8 @@ public class KBHandle
     {
         range = aRange;
     }
+
+     */
 
     public String getDescription()
     {
@@ -214,8 +221,8 @@ public class KBHandle
             property.setLanguage(aHandle.getLanguage());
             property.setDescription(aHandle.getDescription());
             property.setName(aHandle.getName());
-            property.setRange(aHandle.getRange());
-            property.setDomain(aHandle.getDomain());
+        //    property.setRange(aHandle.getRange());  Depricated functions. There isn't a function to call these variables.
+        //    property.setDomain(aHandle.getDomain());
             return (T) property;
         }
         else if (aClass == KBHandle.class) {
@@ -267,12 +274,13 @@ public class KBHandle
         if (language != null) {
             builder.append("language", language);
         }
+        /*
         if (domain != null) {
             builder.append("domain", domain);
         }
         if (range != null) {
             builder.append("range", range);
-        }
+        }*/
         return builder.toString();
     }
 }

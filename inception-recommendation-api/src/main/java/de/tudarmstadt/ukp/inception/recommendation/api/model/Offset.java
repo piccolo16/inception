@@ -64,7 +64,7 @@ public class Offset
     }
     
     @Deprecated
-    public int Start()
+    public int getStart()
     {
         return getBegin();
     }

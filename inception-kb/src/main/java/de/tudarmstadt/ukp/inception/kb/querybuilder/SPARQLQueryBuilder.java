@@ -1749,7 +1749,7 @@ public class SPARQLQueryBuilder
     {
         Binding domain = aSourceBindings.getBinding(VAR_DOMAIN_NAME);
         if (domain != null) {
-            aTargetHandle.setDomain(domain.getValue().stringValue());
+            //aTargetHandle.setDomain(domain.getValue().stringValue());
         }
     }
 
@@ -1757,7 +1757,7 @@ public class SPARQLQueryBuilder
     {
         Binding range = aSourceBindings.getBinding(VAR_RANGE_NAME);
         if (range != null) {
-            aTargetHandle.setRange(range.getValue().stringValue());
+            //aTargetHandle.setRange(range.getValue().stringValue());
         }
     }
     

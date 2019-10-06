@@ -164,7 +164,7 @@ public class Predictions
     {
         aPredictions.forEach(prediction -> {
             predictions.put(new ExtendedId(user.getUsername(), project.getId(),
-                    prediction.getDocumentName(), aLayerId, prediction.getOffset(),
+                    prediction.getDocumentName(), aLayerId, new Offset(prediction.getBegin(), prediction.getEnd()),
                     prediction.getRecommenderId(), prediction.getId(), -1), prediction);
 
         });
@@ -213,8 +213,8 @@ public class Predictions
         return predictions.entrySet().stream()
             .filter(f -> f.getKey().getDocumentName().equals(aDocumentName))
             .filter(f -> f.getKey().getLayerId() == aLayer.getId())
-            .filter(f -> f.getKey().getOffset().getBegin() == aBegin)
-            .filter(f -> f.getKey().getOffset().getEnd() == aEnd)
+            .filter(f -> new Offset(f.getKey().getBegin(), f.getKey().getEnd()).getBegin() == aBegin)
+            .filter(f -> new Offset(f.getKey().getBegin(), f.getKey().getEnd()).getEnd() == aEnd)
             .filter(f -> f.getValue().getFeature().equals(aFeature))
             .map(Map.Entry::getValue)
             .collect(Collectors.toList());

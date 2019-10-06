@@ -100,8 +100,8 @@ public class LearningRecordServiceImpl
         record.setUserAction(aUserAction);
         record.setOffsetCharacterBegin(aSuggestion.getBegin());
         record.setOffsetCharacterEnd(aSuggestion.getEnd());
-        record.setOffsetTokenBegin(-1);
-        record.setOffsetTokenEnd(-1);
+        //record.setOffsetTokenBegin(-1);
+        //record.setOffsetTokenEnd(-1);
         record.setTokenText(aSuggestion.getCoveredText());
         record.setAnnotation(aAlternativeLabel);
         record.setLayer(aLayer);
@@ -124,8 +124,8 @@ public class LearningRecordServiceImpl
                 "ORDER BY l.id desc");
         TypedQuery<LearningRecord> query = entityManager.createQuery(sql, LearningRecord.class)
                 .setParameter("user", aUsername)
-                .setParameter("layer", aLayer)
-                .setParameter("action", LearningRecordType.SHOWN); // SHOWN records NOT returned
+                .setParameter("layer", aLayer);
+               // .setParameter("action", LearningRecordType.SHOWN) // SHOWN records NOT returned
         if (aLimit > 0) {
             query = query.setMaxResults(aLimit);
         }
