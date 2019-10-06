@@ -64,7 +64,7 @@ public class Offset
     }
     
     @Deprecated
-    public int getStart()
+    public int Start()
     {
         return getBegin();
     }
@@ -101,9 +101,9 @@ public class Offset
         //  4        |        #######         |
         //           |                        |
 
-        return (((i.getStart() <= getStart()) && (getStart() < i.getEnd())) || // Case 1-3
-                ((i.getStart() < getEnd()) && (getEnd() <= i.getEnd())) || // Case 1-3
-                ((getStart() <= i.getStart()) && (i.getEnd() <= getEnd()))); // Case 4
+        return (((i.getBegin() <= getBegin()) && (getBegin() < i.getEnd())) || // Case 1-3
+                ((i.getBegin() < getEnd()) && (getEnd() <= i.getEnd())) || // Case 1-3
+                ((getBegin() <= i.getBegin()) && (i.getEnd() <= getEnd()))); // Case 4
     }    
     @Override
     public int hashCode()
