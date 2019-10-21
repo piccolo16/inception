@@ -57,7 +57,7 @@ public class ImageFeatureSupport
     implements FeatureSupport<ImageFeatureTraits>
 {
     public static final String PREFIX = "img:";
-
+//we are going to change this part
     public static final String URL = "url";
     public static final String TYPE_IMAGE_URL = PREFIX + URL;
 
