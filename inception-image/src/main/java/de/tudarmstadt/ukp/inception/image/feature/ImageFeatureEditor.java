@@ -69,7 +69,7 @@ public class ImageFeatureEditor
     
     private UrlValidator urlValidator()
     {
-        return new UrlValidator(new String[] { "http", "https" });
+        return new UrlValidator(new String[] { "http", "https", "ftp" });
     }
     
     @Override
